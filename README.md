@@ -1,9 +1,8 @@
-# Challenges for GRCon 23
+# Challenges for GRCon 23 by Aerospace Team Platypus
 
 ## Overview
 
-All of our challenges are independent, but there is a pseudo story to the flavortext that ties them all together.
-We pretend 100 is a base point value and suggest a number based on difficulty. Scale as appropriate.
+All of our challenges are independent, but there is a detective story to the flavortext that ties them all together. This year we assigned our puzzles points in the range of (25, 100) based on difficulty.
 
 ## Layout
 
@@ -11,11 +10,8 @@ Each challenge has a `public/` folder that holds files facing the challenger, an
 
 ## Order of Challenges
 
-0. `000_???/`
-1. `001_???/`
-2. `002_???/`
+All challenges should be released simultaneously.
 
 ## Prior Work
 
 Our 2022 challenge repository [can be found here](https://github.com/bebau/grcon22).
-
