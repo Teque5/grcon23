@@ -1,4 +1,4 @@
-# AIS Chess
+# Noir 4: Symphony of Signals (AIS Chess)
 
 ## Solution
 

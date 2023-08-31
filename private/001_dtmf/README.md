@@ -1,4 +1,4 @@
-# Magic Eye
+# Noir 2: The Allure of Secrets (DTMF)
 
 ## Solution
 

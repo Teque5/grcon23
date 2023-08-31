@@ -1,4 +1,4 @@
-# Magic Eye
+# # Noir 0: The Enigmatic Invitation (Magic Eye)
 
 ## Solution
 

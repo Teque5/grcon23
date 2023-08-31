@@ -1,10 +1,10 @@
-# Meta Puzzle
+# Noir 5: The Tapestry Unraveled (Metapuzzle)
 
 ## Solution
 
 * 31 points
 * Topic: Word Puzzle / Meta
-* `flag{???????????}`
+* `flag{snake}`
 
 ## Explanation
 

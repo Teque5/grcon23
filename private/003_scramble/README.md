@@ -1,4 +1,4 @@
-# Voice Scrambler
+# Noir 3: Unscrambling the Echos
 
 ## Solution
 
