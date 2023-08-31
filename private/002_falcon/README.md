@@ -10,6 +10,10 @@
 
 QR code is hidden with the STL file. Can be seen by loading into any 3d modeling software, but was intended to be found by using a 3d printing slicer.
 
+![Falcon Sliced Three-Quarter View](falcon_sliced_quarter.webp)
+![Falcon Sliced Top](falcon_sliced_top.webp)
+![QR Raw](qr.png)
+
 ## Generate
 
 ### Getting started
@@ -18,3 +22,4 @@ QR code is hidden with the STL file. Can be seen by loading into any 3d modeling
 2) Create QR code SVG:
     `qrencode -l L -t SVG -o /media/ring/Unorganized/falcon.svg "Picking up an elegant scarf, Vivian noticed an unexpected detail—an ornate design that concealed a telephone number: 6175422652" -m 2 -d 8 -s 1`
 3) Combined within blender and exported.
+4) Save some pics `cwebp -q 80 falcon.png -o falcon.webp`
