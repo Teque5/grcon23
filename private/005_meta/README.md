@@ -8,15 +8,8 @@
 
 ## Explanation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+This is a simple word puzzle that combines the clues from the prior challenges, incentivising folks to complete all the puzzles. It also completes the story.
 
-## Generating the wav file
+## Generation
 
-### Getting started
-
-* do something
-* click something
-
-### Dependencies
-
-* ?
+Created from scratch in inkscape.

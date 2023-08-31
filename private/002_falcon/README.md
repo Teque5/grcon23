@@ -4,19 +4,17 @@
 
 * 37 points
 * Topic: 3D Printing / QR Code
-* `flag{???????????}`
+* `flag{6175422652}`
 
 ## Explanation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+QR code is hidden with the STL file. Can be seen by loading into any 3d modeling software, but was intended to be found by using a 3d printing slicer.
 
-## Generating the wav file
+## Generate
 
 ### Getting started
 
-* do something
-* click something
-
-### Dependencies
-
-* ?
+1) Original [Maltese Falcon](https://www.thingiverse.com/thing:46631/files) STL.
+2) Create QR code SVG:
+    `qrencode -l L -t SVG -o /media/ring/Unorganized/falcon.svg "Picking up an elegant scarf, Vivian noticed an unexpected detail—an ornate design that concealed a telephone number: 6175422652" -m 2 -d 8 -s 1`
+3) Combined within blender and exported.
