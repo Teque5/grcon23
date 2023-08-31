@@ -88,7 +88,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [56, 804.0]
+    coordinate: [32, 836.0]
     rotation: 0
     state: true
 - name: fc_khz
@@ -99,9 +99,7 @@ blocks:
     label: fc_khz
     min_len: '200'
     orient: QtCore.Qt.Horizontal
-    outputmsgname: value
     rangeType: float
-    showports: 'False'
     start: '-10'
     step: '.1'
     stop: '10'
@@ -114,6 +112,18 @@ blocks:
     coordinate: [920, 12.0]
     rotation: 0
     state: enabled
+- name: hops_per_second
+  id: variable
+  parameters:
+    comment: Ideally integer divides samp_rate
+    value: '9'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1160, 1236.0]
+    rotation: 0
+    state: enabled
 - name: noise_bw_khz
   id: variable_qtgui_range
   parameters:
@@ -122,9 +132,7 @@ blocks:
     label: noise_bw_khz
     min_len: '200'
     orient: QtCore.Qt.Horizontal
-    outputmsgname: value
     rangeType: float
-    showports: 'False'
     start: '0'
     step: '.001'
     stop: '10'
@@ -135,6 +143,18 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [784, 12.0]
+    rotation: 0
+    state: enabled
+- name: peak_volume
+  id: variable
+  parameters:
+    comment: -8 LUFS
+    value: 10**(-8/10)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1392, 36.0]
     rotation: 0
     state: enabled
 - name: probe_freq_shift
@@ -173,24 +193,12 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '48000'
+    value: '44100'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
     coordinate: [8, 108.0]
-    rotation: 0
-    state: enabled
-- name: samp_rate_0
-  id: variable
-  parameters:
-    comment: ''
-    value: '48000'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [408, 12.0]
     rotation: 0
     state: enabled
 - name: secret
@@ -213,9 +221,7 @@ blocks:
     label: sweep_bw_khz
     min_len: '200'
     orient: QtCore.Qt.Horizontal
-    outputmsgname: value
     rangeType: float
-    showports: 'False'
     start: '0'
     step: '.001'
     stop: samp_rate/2/1e3
@@ -236,9 +242,7 @@ blocks:
     label: sweep_rate
     min_len: '200'
     orient: QtCore.Qt.Horizontal
-    outputmsgname: value
     rangeType: float
-    showports: 'False'
     start: '0'
     step: '.1'
     stop: '100'
@@ -291,7 +295,7 @@ blocks:
     max_gain: '65536'
     maxoutbuf: '0'
     minoutbuf: '0'
-    reference: '.1'
+    reference: peak_volume
     type: complex
   states:
     bus_sink: false
@@ -372,7 +376,7 @@ blocks:
     bus_structure: null
     coordinate: [240, 372.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: analog_random_source_x_0
   id: analog_random_source_x
   parameters:
@@ -414,7 +418,7 @@ blocks:
     bus_structure: null
     coordinate: [424, 508.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: analog_sig_source_x_0_1
   id: analog_sig_source_x
   parameters:
@@ -456,7 +460,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [744, 324.0]
+    coordinate: [704, 332.0]
     rotation: 0
     state: enabled
 - name: audio_sink_0
@@ -475,7 +479,24 @@ blocks:
     bus_structure: null
     coordinate: [1512, 468.0]
     rotation: 0
-    state: enabled
+    state: disabled
+- name: audio_sink_0_0
+  id: audio_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    device_name: ''
+    num_inputs: '1'
+    ok_to_block: 'True'
+    samp_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [560, 300.0]
+    rotation: 0
+    state: disabled
 - name: blocks_complex_to_float_0
   id: blocks_complex_to_float
   parameters:
@@ -508,6 +529,22 @@ blocks:
     coordinate: [968, 556.0]
     rotation: 0
     state: enabled
+- name: blocks_float_to_complex_0
+  id: blocks_float_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [488, 368.0]
+    rotation: 0
+    state: true
 - name: blocks_int_to_float_0
   id: blocks_int_to_float
   parameters:
@@ -655,13 +692,30 @@ blocks:
     coordinate: [696, 256.0]
     rotation: 0
     state: enabled
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1520, 424.0]
+    rotation: 0
+    state: true
 - name: blocks_repeat_0
   id: blocks_repeat
   parameters:
     affinity: ''
     alias: ''
     comment: ''
-    interp: int(samp_rate/8)
+    interp: int(samp_rate/hops_per_second)
     maxoutbuf: '0'
     minoutbuf: '0'
     type: float
@@ -695,7 +749,7 @@ blocks:
     bus_structure: null
     coordinate: [624, 468.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_stream_to_vector_0
   id: blocks_stream_to_vector
   parameters:
@@ -791,6 +845,24 @@ blocks:
     coordinate: [1072, 1076.0]
     rotation: 0
     state: enabled
+- name: blocks_wavfile_source_0
+  id: blocks_wavfile_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    file: /home/kal29868/Projects/grcon23/private/003_scramble/scramble1.wav
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nchan: '1'
+    repeat: 'True'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [256, 332.0]
+    rotation: 0
+    state: true
 - name: digital_glfsr_source_x_0
   id: digital_glfsr_source_x
   parameters:
@@ -858,9 +930,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [448, 340.0]
+    coordinate: [400, 412.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_number_sink_1
   id: qtgui_number_sink
   parameters:
@@ -1347,6 +1419,19 @@ blocks:
     coordinate: [160, 748.0]
     rotation: 0
     state: disabled
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1608, 968.0]
+    rotation: 0
+    state: disabled
 
 connections:
 - [analog_agc2_xx_0, '0', blocks_complex_to_float_0, '0']
@@ -1362,9 +1447,11 @@ connections:
 - [analog_sig_source_x_0_1, '0', analog_frequency_modulator_fc_1, '0']
 - [analog_sig_source_x_1_1, '0', blocks_multiply_xx_0_0_0, '1']
 - [blocks_complex_to_float_0, '0', audio_sink_0, '0']
+- [blocks_complex_to_float_0, '0', blocks_null_sink_0, '0']
 - [blocks_complex_to_float_0, '0', qtgui_time_sink_x_0_0, '0']
 - [blocks_complex_to_mag_squared_0, '0', analog_agc2_xx_1, '0']
 - [blocks_complex_to_mag_squared_0, '0', blocks_moving_average_xx_0, '0']
+- [blocks_float_to_complex_0, '0', blocks_multiply_xx_0_2, '1']
 - [blocks_int_to_float_0, '0', blocks_integrate_xx_0, '0']
 - [blocks_int_to_float_0, '0', blocks_moving_average_xx_0_0, '0']
 - [blocks_int_to_float_0, '0', blocks_stream_to_vector_0, '0']
@@ -1386,6 +1473,8 @@ connections:
 - [blocks_throttle_1, '0', blocks_complex_to_mag_squared_0, '0']
 - [blocks_vector_source_x_0, '0', blocks_repeat_0, '0']
 - [blocks_vector_source_x_0, '0', rational_resampler_xxx_0, '0']
+- [blocks_wavfile_source_0, '0', audio_sink_0_0, '0']
+- [blocks_wavfile_source_0, '0', blocks_float_to_complex_0, '0']
 - [digital_glfsr_source_x_0, '0', blocks_integrate_xx_1, '0']
 - [digital_glfsr_source_x_0, '0', blocks_throttle_0_0_0_0, '0']
 - [low_pass_filter_0_1, '0', blocks_selector_0, '0']
@@ -1395,4 +1484,3 @@ connections:
 
 metadata:
   file_format: 1
-  grc_version: 3.10.4.0
