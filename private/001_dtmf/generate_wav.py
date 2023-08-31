@@ -65,7 +65,7 @@ def generate_dual_tone(fs, f1, f2, duration):
     """
     t = np.linspace(0,duration,int(duration*fs))
     dual_tone = np.sin(2*np.pi*f1*t) + np.sin(2*np.pi*f2*t)
-    return dual_tone
+    return dual_tone * 0.45
 
 def generate_message_wav(message, filename='message.wav', dial_tone_duration=3):
     tone_arr = []
