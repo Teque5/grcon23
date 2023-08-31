@@ -1,1 +1,3 @@
 scramble_descramble.py
+*.sigmf-meta
+*.sigmf-data

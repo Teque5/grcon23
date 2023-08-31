@@ -2,7 +2,7 @@
 
 ## Solution
 
-* 71 points
+* 83 points
 * Topic: GNU Radio Companion / DSP / SigMF
 * `flag{coiffure}`
 

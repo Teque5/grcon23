@@ -1,0 +1,12 @@
+{
+    "global": {
+        "core:author": "Kyle Logue (K6OF)",
+        "core:datatype": "cf32_le",
+        "core:description": "a mixed up clue",
+        "core:sample_rate": 44100,
+        "core:sha512": "c36b2a1b499fdf0b996114a490dd80b6a84b0455fec7a73737b88a193a5e25d136c6ef5cd487ecebe538503aa0d61e78b4998687f1fcb1162101f76d93521e2b",
+        "core:version": "1.1.2"
+    },
+    "captures": [],
+    "annotations": []
+}
