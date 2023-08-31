@@ -10,7 +10,7 @@ Each challenge has a `public/` folder that holds files facing the challenger, an
 
 ## Order of Challenges
 
-All challenges should be released simultaneously.
+All challenges should be released sequentially over the _first_ day at GRCon.
 
 ## Prior Work
 
