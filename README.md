@@ -1,4 +1,4 @@
-# Challenges for GRCon 23 by Aerospace Team Platypus
+# Challenges for GRCon 23
 
 ## Overview
 
