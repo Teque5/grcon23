@@ -6,7 +6,7 @@ All of our challenges are independent, but there is a detective story to the fla
 
 ## Layout
 
-Each challenge has a `public/` folder that holds files facing the challenger, and a `private/` folder with solutions and creation files for the challenge.
+Each challenge has a `public/` folder that holds files facing the challenger, and a `private/` folder with solutions and creation files for the challenge. Please ignore any challenge with a `xxx_` prefix.
 
 ## Order of Challenges
 
