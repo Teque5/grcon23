@@ -23,7 +23,8 @@ Investigating the symphony SigMF file, there is a baseband audio signal that say
 !AIVDM,1,1,,B,10000DOP?w:bn;icbSO>4?wp0000,0*4C
 !AIVDM,1,1,,A,1h000CgP?w:cR8Cc`fBN4?wp0000,0*66
 !AIVDM,1,1,,A,1h000DOP?w:c4mCckeJN4?wp0000,0*7A
-!AIVDM,1,1,,B,10000CgP?w:cCNicf=o>4?wp0000,0*70```
+!AIVDM,1,1,,B,10000CgP?w:cCNicf=o>4?wp0000,0*70
+```
 
 These can be decoded with pyais and plotted. Then, all that's left is to solve the "Mate in 1" puzzle. 
 
