@@ -1,0 +1,15 @@
+{
+  "global": {
+    "core:datatype": "cf32_le",
+    "core:sample_rate": 250000.0,
+    "core:version": "1.0.0",
+    "core:description": "White on channel A, Black on channel B"
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:frequency": 162000000.0
+    }
+  ],
+  "annotations": []
+}
