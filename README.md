@@ -1,8 +1,10 @@
-# Challenges for GRCon 23
+# Challenges for GRCon23
+
+GNU Radio Conference 2023 in Tempe, Arizone week of 2023-09-05.
 
 ## Overview
 
-All of our challenges are independent, but there is a detective story to the flavortext that ties them all together. This year we assigned our puzzles points in the range of (25, 100) based on difficulty.
+All of our challenges are independent, but there is a detective story to the flavortext that ties them all together. This year we assigned our puzzles points in the range of (23, 199) based on difficulty.
 
 ## Layout
 

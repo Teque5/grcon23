@@ -2,7 +2,7 @@
 
 ## Solution
 
-* 97 points
+* 199 points
 * Topic: AIS / DSP / SDR / Chess
 * `flag{Qc7}`
 

@@ -593,7 +593,7 @@ blocks:
     bus_structure: null
     coordinate: [1008, 500.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: blocks_vector_source_x_0
   id: blocks_vector_source_x
   parameters:
@@ -1040,9 +1040,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [768, 1276.0]
+    coordinate: [792, 1268.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: virtual_sink_2_0
   id: virtual_sink
   parameters:
@@ -1055,7 +1055,7 @@ blocks:
     bus_structure: null
     coordinate: [352, 900.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: virtual_source_0
   id: virtual_source
   parameters:
