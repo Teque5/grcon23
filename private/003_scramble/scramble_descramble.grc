@@ -236,7 +236,7 @@ blocks:
     affinity: ''
     alias: ''
     amp: '1'
-    comment: fmin
+    comment: ''
     freq: -(fc_khz+sweep_bw_khz/2)*1e3
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -554,6 +554,23 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [824, 1384.0]
+    rotation: 0
+    state: true
+- name: blocks_null_sink_0_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [872, 1560.0]
     rotation: 0
     state: true
 - name: blocks_repeat_0
@@ -1094,7 +1111,7 @@ blocks:
     bus_structure: null
     coordinate: [824, 1332.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: virtual_sink_2_0
   id: virtual_sink
   parameters:
@@ -1107,7 +1124,7 @@ blocks:
     bus_structure: null
     coordinate: [456, 948.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: virtual_source_0
   id: virtual_source
   parameters:
@@ -1195,6 +1212,7 @@ connections:
 - [analog_sig_source_x_1_1_0, '0', blocks_multiply_xx_0_0_0_0, '1']
 - [analog_sig_source_x_1_1_1, '0', blocks_multiply_xx_0_0_0_1, '1']
 - [audio_agc_block, '0', audio_sink_0, '0']
+- [audio_agc_block, '0', blocks_null_sink_0_0, '0']
 - [blocks_add_xx_0, '0', blocks_sigmf_sink_minimal_0, '0']
 - [blocks_add_xx_0, '0', virtual_sink_1, '0']
 - [blocks_complex_to_float_0, '0', audio_agc_block, '0']

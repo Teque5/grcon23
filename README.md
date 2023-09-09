@@ -1,6 +1,8 @@
 # Challenges for GRCon23
 
-GNU Radio Conference 2023 in Tempe, Arizone week of 2023-09-05.
+GNU Radio Conference 2023 in Tempe, Arizona the week of 2023-09-05.
+
+![scrambled](private/003_scramble/scrambled.webp)
 
 ## Overview
 
@@ -14,6 +16,10 @@ Each challenge has a `public/` folder that holds files facing the challenger, an
 
 All challenges should be released sequentially over the _first_ day at GRCon.
 
-## Prior Work
+## Links & Prior Art
 
-Our 2022 challenge repository [can be found here](https://github.com/bebau/grcon22).
+* A recording of our talk about this work is at _upcoming youtube link_.
+* A slide deck showing our explanations [can be found here](https://docs.google.com/presentation/d/1ioPsVzt0WdKOX_6fFdYI2FxYdD3U_w99TLeZ8Mo6R-Q/edit?usp=sharing)
+* Our 2022 challenge repository [can be found here](https://github.com/bebau/grcon22).
+
+![blur](public/000_magic/blurry_stereogram.png)
