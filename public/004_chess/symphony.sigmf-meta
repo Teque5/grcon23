@@ -3,6 +3,8 @@
         "core:author": "bebau",
         "core:datatype": "cf32_le",
         "core:description": "Noir4: White on channel A, Black on channel B",
+        "core:license": "CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+        "core:num_channels": 1,
         "core:sample_rate": 250000.0,
         "core:sha512": "ed37ec5ced09d5f55f623f88548e4478ea857177b1bacc3058515c627701a64f02e63c2456204b4255331cf4b8967e7bcff78d7e72c411c07897dfbfb80e7a10",
         "core:version": "1.1.3"
